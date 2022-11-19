@@ -4,6 +4,8 @@ services:
     container_name: nginx-proxy-manager
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
+    environment:
+      - TZ="America/Chicago"
     ports:
       - '80:80'
       - '81:81'
